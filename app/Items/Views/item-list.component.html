@@ -1,7 +1,10 @@
-<div *ngIf="item">
-  <h2>{{item.name}} details!</h2>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="item.name" placeholder="name"/>
-  </div>
-</div>
+<h1>{{title}}</h1>
+<h2>My Item</h2>
+<ul class="items">
+  <li *ngFor="let item of items"
+    [class.selected]="item === selectedItem"
+    (click)="onSelect(item)">
+    <span class="badge">{{item.name}}</span>
+  </li>
+</ul>
+<my-item-detail [item]="selectedItem"></my-item-detail>

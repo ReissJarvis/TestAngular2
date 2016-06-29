@@ -4,15 +4,8 @@ import { Item } from './Objects/item';
 
 @Component({
   selector: 'my-item-detail',
-  template: `
-    <div *ngIf="item">
-      <h2>{{item.name}} details!</h2>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="item.name" placeholder="name"/>
-      </div>
-    </div>
-  `
+  moduleId: module.id,
+  templateUrl: "./Views/item-detail.component.html",
 })
 
 export class ItemDetailComponent {

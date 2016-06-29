@@ -12,18 +12,8 @@ const ITEMS: Item[] = [
 
 @Component({
   selector: 'item-list',
-  template: `
-    <h1>{{title}}</h1>
-    <h2>My Item</h2>
-    <ul class="items">
-      <li *ngFor="let item of items"
-        [class.selected]="item === selectedItem"
-        (click)="onSelect(item)">
-        <span class="badge">{{item.name}}</span>
-      </li>
-    </ul>
-    <my-item-detail [item]="selectedItem"></my-item-detail>
-  `,
+  moduleId: module.id,
+  templateUrl: "./Views/item-list.component.html",
   styles: [`
     .selected {
       background-color: #CFD8DC !important;

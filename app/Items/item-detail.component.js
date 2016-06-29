@@ -20,7 +20,8 @@ var ItemDetailComponent = (function () {
     ItemDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-item-detail',
-            template: "\n    <div *ngIf=\"item\">\n      <h2>{{item.name}} details!</h2>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"item.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  "
+            moduleId: module.id,
+            templateUrl: "./Views/item-detail.component.html",
         }), 
         __metadata('design:paramtypes', [])
     ], ItemDetailComponent);
