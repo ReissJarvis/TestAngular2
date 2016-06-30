@@ -20,7 +20,6 @@ var ItemDetailComponent = (function () {
     ItemDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-item-detail',
-            moduleId: module.id,
             templateUrl: "./Views/item-detail.component.html",
         }), 
         __metadata('design:paramtypes', [])

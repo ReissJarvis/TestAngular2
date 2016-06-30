@@ -1,5 +1,5 @@
-<h1>{{title}}</h1>
-<h2>My Item</h2>
+<div class="itemList">
+  <h2>{{title}}</h2>
 <ul class="items">
   <li *ngFor="let item of items"
     [class.selected]="item === selectedItem"
@@ -7,4 +7,5 @@
     <span class="badge">{{item.name}}</span>
   </li>
 </ul>
-<my-item-detail [item]="selectedItem"></my-item-detail>
+<my-item-detail [item]="selectedItem"> Have Not Selected Item.</my-item-detail>
+</div>

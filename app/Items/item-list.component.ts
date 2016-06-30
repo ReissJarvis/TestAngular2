@@ -62,6 +62,12 @@ const ITEMS: Item[] = [
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
+    .itemList{
+      float:left;
+    }
+    .itemDetail {
+      float:left;
+    }
   `],
   directives: [ItemDetailComponent]
 })

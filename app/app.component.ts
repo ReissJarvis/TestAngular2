@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Item } from './Items/Objects/item';
-import { ItemListComponent } from './Items/item-list.component'
+import { ItemListComponent } from './Items/item-list.component';
 import { ItemDetailComponent } from './Items/item-detail.component';
-
 
 
 @Component({
