@@ -5,7 +5,22 @@ h1 {
 }
 body {
   margin: 2em;
+  background-color: #ecf0f1;
 }
+
+.loading{
+  width: 100px;
+  height:100px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin:auto;
+}
+
 
  /*
   * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
