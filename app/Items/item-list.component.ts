@@ -7,7 +7,7 @@ import { ItemService } from './Services/item.service';
 @Component({
   selector: 'item-list',
   moduleId: module.id,
-  templateUrl: "./Views/item-list.component.html",
+  templateUrl: "item-list.component.html",
   styles: [`
     .selected {
       background-color: #CFD8DC !important;

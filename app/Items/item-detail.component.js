@@ -21,7 +21,7 @@ var ItemDetailComponent = (function () {
         core_1.Component({
             selector: 'my-item-detail',
             moduleId: module.id,
-            templateUrl: "./Views/item-detail.component.html",
+            templateUrl: "item-detail.component.html",
         }), 
         __metadata('design:paramtypes', [])
     ], ItemDetailComponent);

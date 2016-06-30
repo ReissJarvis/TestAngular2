@@ -5,7 +5,7 @@ import { Item } from './Objects/item';
 @Component({
   selector: 'my-item-detail',
   moduleId: module.id,
-  templateUrl: "./Views/item-detail.component.html",
+  templateUrl: "item-detail.component.html",
 })
 
 export class ItemDetailComponent {
