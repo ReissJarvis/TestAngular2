@@ -9,23 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var item_1 = require('./Objects/item');
-var ItemDetailComponent = (function () {
-    function ItemDetailComponent() {
+var ITEMS = [
+    { name: 'Mr. Nice' },
+    { name: 'Narco' },
+    { name: 'Bombasto' },
+    { name: 'Celeritas' },
+];
+var ItemService = (function () {
+    function ItemService() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', item_1.Item)
-    ], ItemDetailComponent.prototype, "item", void 0);
-    ItemDetailComponent = __decorate([
-        core_1.Component({
-            selector: 'my-item-detail',
-            moduleId: module.id,
-            templateUrl: "./Views/item-detail.component.html",
-        }), 
+    ItemService.prototype.getItems = function () {
+        return Promise.resolve(ITEMS);
+    };
+    ItemService.prototype.getItemsSlowly = function () {
+        return new Promise(function (resolve) { return setTimeout(function () { return resolve(ITEMS); }, 2000); });
+    };
+    ItemService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], ItemDetailComponent);
-    return ItemDetailComponent;
+    ], ItemService);
+    return ItemService;
 }());
-exports.ItemDetailComponent = ItemDetailComponent;
-//# sourceMappingURL=item-detail.component.js.map
+exports.ItemService = ItemService;
+//# sourceMappingURL=item.service.js.map

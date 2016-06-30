@@ -1,14 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Item } from './Objects/item';
 import { ItemDetailComponent } from './item-detail.component';
-
-const ITEMS: Item[] = [
-  { name: 'Mr. Nice' },
-  { name: 'Narco' },
-  { name: 'Bombasto' },
-  { name: 'Celeritas' },
-];
+import { ItemService } from './Services/item.service';
 
 @Component({
   selector: 'item-list',
@@ -69,12 +63,19 @@ const ITEMS: Item[] = [
       float:left;
     }
   `],
-  directives: [ItemDetailComponent]
+  directives: [ItemDetailComponent],
+  providers:[ItemService]
 })
-export class ItemListComponent {
-  title = 'Item  List';
-  items = ITEMS;
+export class ItemListComponent implements OnInit {
+  title = 'Item List';
+  items: Item[];
   selectedItem:Item;
+
+  constructor(private itemService: ItemService){}
+
+  ngOnInit(){
+    this.itemService.getItemsSlowly().then(items => this.items = items);
+  }
 
   onSelect(item: Item) { this.selectedItem = item; }
 }
