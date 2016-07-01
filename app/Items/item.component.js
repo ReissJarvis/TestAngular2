@@ -9,22 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var item_service_1 = require('./Items/Services/item.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = "Item Application";
+var item_list_component_1 = require('./item-list.component');
+var item_detail_component_1 = require('./item-detail.component');
+var ItemComponent = (function () {
+    function ItemComponent() {
     }
-    AppComponent = __decorate([
+    ItemComponent.prototype.onSelect = function (item) { this.selectedItem = item; };
+    ItemComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n<h1>{{title}}</h1>\n<nav>\n  <a [routerLink] = \"['/dashboard']\" routerLinkActive='active'> Dashboard</a>\n  <a [routerLink] = \"['/items']\" routerLinkActive='active'> Items</a>\n</nav>\n<router-outlet></router-outlet>\n  ",
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [item_service_1.ItemService]
+            selector: 'my-items',
+            moduleId: module.id,
+            template: "<h1>Items</h1>\n      <item-list></item-list>\n      <my-item-detail [item]=\"selectedItem\"></my-item-detail>\n      ",
+            directives: [item_list_component_1.ItemListComponent, item_detail_component_1.ItemDetailComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ItemComponent);
+    return ItemComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ItemComponent = ItemComponent;
+//# sourceMappingURL=item.component.js.map

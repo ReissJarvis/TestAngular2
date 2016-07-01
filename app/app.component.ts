@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
 
-import { Item } from './Items/Objects/item';
-import { ItemListComponent } from './Items/item-list.component';
-import { ItemDetailComponent } from './Items/item-detail.component';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
+import { ItemService } from './Items/Services/item.service';
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>My SECOND Angular 2 App</h1>
-      <item-list></item-list>
-      <my-item-detail [item]="selectedItem"></my-item-detail>
-      `,
-  directives:[ItemListComponent, ItemDetailComponent]
+  selector:'my-app',
+  template:`
+<h1>{{title}}</h1>
+<nav>
+  <a [routerLink] = "['/dashboard']" routerLinkActive='active'> Dashboard</a>
+  <a [routerLink] = "['/items']" routerLinkActive='active'> Items</a>
+</nav>
+<router-outlet></router-outlet>
+  `,
+  directives:[ROUTER_DIRECTIVES],
+  providers:[ItemService]
 })
 
-export class AppComponent {
-  selectedItem:Item;
-
-  onSelect(item: Item) { this.selectedItem = item; }
+export class AppComponent{
+  title = "Item Application";
 }

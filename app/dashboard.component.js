@@ -9,22 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var item_service_1 = require('./Items/Services/item.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = "Item Application";
+var DashboardComponent = (function () {
+    function DashboardComponent() {
     }
-    AppComponent = __decorate([
+    DashboardComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n<h1>{{title}}</h1>\n<nav>\n  <a [routerLink] = \"['/dashboard']\" routerLinkActive='active'> Dashboard</a>\n  <a [routerLink] = \"['/items']\" routerLinkActive='active'> Items</a>\n</nav>\n<router-outlet></router-outlet>\n  ",
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [item_service_1.ItemService]
+            selector: 'my-dashboard',
+            template: '<h3>My Dashboard</h3>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DashboardComponent);
+    return DashboardComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map

@@ -63,8 +63,7 @@ import { ItemService } from './Services/item.service';
       float:left;
     }
   `],
-  directives: [ItemDetailComponent],
-  providers:[ItemService]
+  directives: [ItemDetailComponent]
 })
 export class ItemListComponent implements OnInit {
   title = 'Item List';
