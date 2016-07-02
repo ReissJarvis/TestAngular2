@@ -1,7 +1,7 @@
 "use strict";
 var router_1 = require('@angular/router');
 var item_component_1 = require('./Items/item.component');
-var dashboard_component_1 = require('./dashboard.component');
+var dashboard_component_1 = require('./Dashboard/dashboard.component');
 var routes = [
     {
         path: 'dashboard',

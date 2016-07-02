@@ -10,22 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var item_service_1 = require('./Items/Services/item.service');
-var navigation_component_1 = require('./Navigation/navigation.component');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = "Item Application";
+var NavigationComponent = (function () {
+    function NavigationComponent() {
     }
-    AppComponent = __decorate([
+    NavigationComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n<h1>{{title}}</h1>\n<nav></nav>\n<router-outlet></router-outlet>\n  ",
-            directives: [router_1.ROUTER_DIRECTIVES, navigation_component_1.NavigationComponent],
-            providers: [item_service_1.ItemService]
+            selector: 'nav',
+            moduleId: module.id,
+            templateUrl: 'navigation.component.html',
+            styleUrls: ['navigation.component.css'],
+            directives: [router_1.ROUTER_DIRECTIVES],
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], NavigationComponent);
+    return NavigationComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.NavigationComponent = NavigationComponent;
+//# sourceMappingURL=navigation.component.js.map

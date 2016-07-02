@@ -1,7 +1,7 @@
-import {provideRouter, RouterConfig} from '@angular/router';
+import { provideRouter, RouterConfig } from '@angular/router';
 
-import{ ItemComponent } from './Items/item.component';
-import { DashboardComponent } from './dashboard.component';
+import { ItemComponent } from './Items/item.component';
+import { DashboardComponent } from './Dashboard/dashboard.component';
 
 const routes : RouterConfig = [
   {

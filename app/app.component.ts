@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import { ItemService } from './Items/Services/item.service';
+
+import { NavigationComponent } from './Navigation/navigation.component';
 
 @Component({
   selector:'my-app',
   template:`
 <h1>{{title}}</h1>
-<nav>
-  <a [routerLink] = "['/dashboard']" routerLinkActive='active'> Dashboard</a>
-  <a [routerLink] = "['/items']" routerLinkActive='active'> Items</a>
-</nav>
+<nav></nav>
 <router-outlet></router-outlet>
   `,
-  directives:[ROUTER_DIRECTIVES],
+  directives:[ROUTER_DIRECTIVES, NavigationComponent],
   providers:[ItemService]
 })
 
