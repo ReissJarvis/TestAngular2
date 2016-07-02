@@ -10,7 +10,10 @@ import { NavigationComponent } from './Navigation/navigation.component';
   template:`
 <h1>{{title}}</h1>
 <nav></nav>
+<div class="app-body">
 <router-outlet></router-outlet>
+</div>
+
   `,
   directives:[ROUTER_DIRECTIVES, NavigationComponent],
   providers:[ItemService]

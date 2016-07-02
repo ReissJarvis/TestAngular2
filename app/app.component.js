@@ -19,7 +19,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n<h1>{{title}}</h1>\n<nav></nav>\n<router-outlet></router-outlet>\n  ",
+            template: "\n<h1>{{title}}</h1>\n<nav></nav>\n<div class=\"app-body\">\n<router-outlet></router-outlet>\n</div>\n\n  ",
             directives: [router_1.ROUTER_DIRECTIVES, navigation_component_1.NavigationComponent],
             providers: [item_service_1.ItemService]
         }), 

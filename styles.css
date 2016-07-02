@@ -21,6 +21,12 @@ body {
   margin:auto;
 }
 
+.app-body{
+  width:80%;
+  margin-left:10%;
+  background: #95a5a6;
+}
+
 
  /*
   * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
